@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+      padding-top: 0; /* Adjust for fixed navbar height */
+      /*background-image: url('https://fastly.picsum.photos/id/60/1920/1080.jpg?hmac=cA2pbmynrKH50TsCk5ZdIiZmOxvB6wXsSNyRcUe8pko'); /* Replace 'your-background-image-url.jpg' with the URL of your image */
+      background-size: cover;
+      background: linear-gradient(to bottom right, #000000, #42474c, #ffffff);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Fixed background */
+      /* Set the height of the body to the viewport height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      margin: 0;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+    
+    html, body {
+      height: 100%;
+      background-size: cover;
+    }
+    
+    /* Use relative units for font size and spacing */
+    @media only screen and (max-width: 600px) {
+      body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        background-size: cover;
+      }
+    }
+    
+    /* Use relative units for the background size */
+    @media only screen and (max-width: 1200px) {
+      body {
+        
+        background-size: cover;
+      }
+    }
+    
