@@ -1,0 +1,55 @@
+<div class="container mt-4 p-4 border rounded shadow-lg">
+  <div class="card-header bg-gradient-primary text-white text-center rounded-pill">
+    <h3 class="mb-0">Consultation Dossiers</h3>
+  </div>
+
+  <form style="margin-top: 20px;">
+    <div class="form-group mb-3">
+        <label for="dossierType" class="form-label">Type de Dossier:</label>
+      <select id="dossierType" class="form-control" [(ngModel)]="consultationGroup.selectedDossierType" name="selectedDossierType">
+        <option value="Police">Police</option>
+        <option value="Sinistre">Sinistre</option>
+        <option value="Cxp">Cxp</option>
+      </select>
+    </div>
+    <!-- Consulter par -->
+    <div class="form-group mb-3">
+      <label for="consulterPar" class="form-label">Consulter par</label>
+      <input type="text" id="consulterPar" class="form-control" name="consulterPar" [(ngModel)]="consultationGroup.consulterPar" (focus)="getNames()" list="suggestionsNom" placeholder="Enter your name">
+      <datalist id="suggestionsNom" required>
+        <option *ngFor="let suggestion of suggestionsNom" [value]="suggestion"></option>
+      </datalist>
+    </div>
+
+    <!-- Liste des dossiers (changed to a text input) -->
+    <div class="form-group mb-3">
+      <label for="dossierList" class="form-label">Liste des dossiers</label>
+      <textarea id="dossierList" class="form-control" [(ngModel)]="consultationGroup.dossierList" name="dossierList"  style="height: 200px;">
+       bonjour
+        </textarea>
+    </div>
+
+    <!-- Date consultation -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="dateConsultation" class="form-label">Date consultation</label>
+          <input type="date" id="dateConsultation" class="form-control" name="dateConsultation" [(ngModel)]="consultationGroup.dateConsultation">
+        </div>
+      </div>
+
+      <!-- Date retour -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="dateRetour" class="form-label">Date retour</label>
+          <input type="date" id="dateRetour" class="form-control" name="dateRetour" [(ngModel)]="consultationGroup.dateRetour">
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg" (click)="onConsult()">Consulter</button>
+    </div>
+  </form>
+</div>

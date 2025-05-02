@@ -1,0 +1,28 @@
+<div class="box"></div>
+<h3>Gérer Personnels</h3>
+<form>
+   
+    
+    
+    <div class="form-group  ">
+        <label for="inputPassword4">Profil</label>
+        <select id="inputCategorie" class="form-control" name="profil" [(ngModel)]="profil">
+            <option selected>Choose...</option>
+            <option>Personnel</option>
+            <option>Archiviste</option>
+          </select> <br>
+          <label for="inputpersonnel">Nom d'utilisateur </label>
+        <input type="text" id="inputpersonnel" name="inputpersonnel" (focus)="getNames()" [(ngModel)]="inputpersonnel" class="form-control" list="suggestionsNom" required>
+
+        <datalist id="suggestionsNom">
+          <option *ngFor="let suggestion of suggestionsNom" [value]="suggestion"></option>
+        </datalist>
+      </div>
+
+      
+    
+    <button type="button" class="btn btn-success" routerLink="consulterPr" (click)="sendData()" >Consulter</button>
+    
+  </form>
+  
+

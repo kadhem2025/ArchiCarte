@@ -1,0 +1,105 @@
+.box {
+    position: absolute;
+    width: 600px;
+    height: 420px;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.29);
+    opacity: 0.50;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    text-align: center;
+  }
+  
+  .input-container {
+    margin-top: -50px;
+    position: relative;
+    margin-bottom: 10px;
+    
+  }
+  
+  .input {
+    background-color: #fff;
+    width: 140%;
+  padding: 10px 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: sans-serif;
+  outline: none;
+  opacity: 10;
+  
+  }
+  
+  .button {
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 50px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .text{
+    margin-left: 10px;
+    color:#fff;
+    font-size: large;
+  }
+  .outbox{
+    margin-left: 50px;
+    margin-top: 300px;
+    position: relative;
+  }
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-top: -150px;
+  }
+   p{
+    color: white;
+   }
+
+   /* styles.css */
+.button-container {
+  margin-bottom: 10px;
+}
+
+.add-btn,
+.remove-btn {
+  background-color: #777877;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.add-btn:hover,
+.remove-btn:hover {
+  background-color: #657165;
+}
+
+.input-field {
+  width: 200px;
+  padding: 10px;
+  margin-right: 10px; 
+  margin-bottom: 100px;
+  border: 1px solid #d03d3d;
+  border-radius: 5px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,40 @@
+form{
+    margin-top: 180px;
+    position: relative;
+    width: 500px;
+}
+label{
+    color: white;
+}
+button{
+    width: 100px;
+    margin-left: 100px;
+    border-radius: 50px;
+  }
+
+.box {
+    width: 600px;
+    height: 550px;
+    position: fixed;
+    margin-top: 80px;
+    margin-left: -20px;
+    background-color: #141414;
+    opacity: 0.30;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    text-align: center;
+  }
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.5;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-top: -100px;
+  }
+  

@@ -1,0 +1,24 @@
+<div class="box"></div>
+<h3>Demande de dossier</h3>
+  <div class="outbox">
+    
+    <div class="input-container">
+      <label for="inputText" class="text">Code dossier</label>
+      <div *ngFor="let input of inputs">
+        <br>
+      <input type="text" id="inputText" class="input" name="code_dossier" (blur)="chechCodeTs()" [(ngModel)]="input.value"><br>
+    </div>
+    <div class="button-container">
+      <button class="add-btn" (click)="addInput()">+</button>
+      <button class="remove-btn" (click)="removeInput()">-</button>
+    </div>
+      <br>
+      <label for="inputText" class="text">Date de réservation</label>
+      <input type="date" id="inputdateRes" class="input" name="dateRes" [(ngModel)]="model.dateRes"><br>
+      <br>
+      <label for="inputText" class="text">Date de retour</label>
+      <input type="date" id="inputdateRet" class="input" name="dateRet" [(ngModel)]="model.dateRet"><br>
+    </div>
+    <button class="button" (click)="addReservation()">Demander </button>
+  </div>
+

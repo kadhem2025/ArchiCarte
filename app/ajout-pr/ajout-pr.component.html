@@ -1,0 +1,62 @@
+<div class="box"></div>
+<h3>Ajouter Profil</h3>
+<form >
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputNom">Nom</label>
+        <input type="text" class="form-control" id="inputNom" name="nom" [(ngModel)]="nom"  placeholder="Nom">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPrenom">Prénom</label>
+        <input type="text" class="form-control" id="inputPrenom"  name="prenom" [(ngModel)]="prenom"  placeholder="Prénom">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputpassword">Email</label>
+      <input type="email" class="form-control" id="inputpassword" name="email"  [(ngModel)]="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="inputpassword">Mot de passe</label>
+      <input type="password" class="form-control" id="inputpassword" name="password"  [(ngModel)]="password" placeholder="Mot de passe">
+    </div>
+    <div class="form-group">
+        <label for="inputComfPass">Comfirmer le mot de passe</label>
+        <input type="password" class="form-control" id="inputComfPass" name="comfirmPassword" [(ngModel)]="confirmPassword" placeholder=" Comfirmer mot de passe">
+      </div>
+    <div class="form-group ">
+        <label for="inputProfile">Profil</label>
+        <select id="inputProfile" class="form-control" name="Profil" [(ngModel)]="profil">
+            <option selected></option>
+            <option>Archiviste</option>
+            <option>Personnel</option>
+          </select>
+      </div>
+
+      <div class="form-group" *ngIf="profil === 'Personnel'">
+        <label for="additionalOption">Département</label>
+        <select id="additionalOption" class="form-control" name="additionalOption" [(ngModel)]="additionalOption">
+            <option selected>....</option>
+            <option>AUTO</option>
+            <option>IRDS</option>
+            <option>JURIDIQUE</option>
+            <option>RC</option>
+            <option>Financier</option>
+            <option>Santé  &   prevoyance</option>
+            <option>VIE</option>
+            <option>COMMERCIAL</option>
+            <option>Comptabilité</option>
+            <option>Informatique</option>
+            <option>TRANSPORT</option>
+            <option>CXP</option>
+            <option>Inspection</option>
+            <option>Logistique </option>
+            <option>AUDIT</option>
+            <option>Inspection Auto & Recours</option>
+            <option>Reassurance</option>
+            <!-- Add options specific to personnel -->
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addProfil()">Enregistrer</button>
+  </form>
+  
+

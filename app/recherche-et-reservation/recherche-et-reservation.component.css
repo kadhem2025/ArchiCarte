@@ -1,0 +1,10 @@
+label{
+    margin-bottom: -0.5rem;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.container, .container-lg, .container-md, .container-sm {
+    max-width: 1216px;
+}
+

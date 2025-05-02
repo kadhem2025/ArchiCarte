@@ -1,0 +1,224 @@
+<div class="container"  
+  [style.height]="(folderConsultationData.naffaire != '' && this.data.typeDossier == 'Cxp') ? '450px' : ((folderConsultationData.naffaire != '' && this.data.typeDossier == 'Police') ? '520px' : (folderConsultationData.naffaire != '' && this.data.typeDossier == 'Sinistre') ? '650px' : '780px')" 
+  style="background-color: aliceblue; border-radius: 10px; display: inline-block; margin-top: 70px">
+
+
+  <main style="margin-bottom: 40px;">
+      
+      <div class="py-1 text-center" >
+        <h2 style="font: 512 38px / 40px Roboto;">Detail(s) {{this.data.typeDossier != 'Cxp' ? this.data.typeDossier : " Dossier " + this.data.typeDossier }}</h2>
+      </div>
+  
+      <div class="row g-5">
+        <div class="col-md-7 col-lg-8" >
+          <form class="needs-validation" >
+            <div class="row g-3" *ngIf="this.data.typeDossier!='Cxp'" >
+              <div class="col-sm-6">
+                <label for="NumeroPolice" class="form-label">Numero Dossier</label>
+                <input type="text" class="form-control" id="NumeroPolice" name="ndossier" [(ngModel)]="folderData.ndossier" readonly>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="nomclient" class="form-label">Nom Client</label>
+                <input type="text" class="form-control" id="nomclient" name="clientName" [(ngModel)]="folderData.clientName" readonly>
+                
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="branche" class="form-label">Branche</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="branche" name="branche" [(ngModel)]="folderData.branche" readonly>
+                  
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="sousBranche" class="form-label">Sous Branche </label>
+                <input type="text" class="form-control" id="sousBranche" name="sousBrache" [(ngModel)]="folderData.sousBrache" readonly>
+                
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="user" class="form-label">Ajouté par</label>
+                <input type="text" class="form-control" id="user" name="archiviste"  [(ngModel)]="folderData.archiviste" readonly>
+                
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="codeAgence" class="form-label">Code Agence </label>
+                <input type="text" class="form-control" id="codeAgence" name="agenceCode" [(ngModel)]="folderData.agenceCode" readonly>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="dataAjout" class="form-label">Date Ajout </label>
+                <input type="text" class="form-control" id="dataAjout" name="dateAdded" [(ngModel)]="folderData.dateAdded" readonly>
+              </div>
+
+              <div *ngIf="this.data.typeDossier=='Sinistre'" class="col-sm-12" style="display: contents;">
+                <!--<div class="col-sm-6">
+                  <label for="numPolice" class="form-label">Numéro Police </label>
+                  <input type="text" class="form-control" id="numPolice" name="npolice" [(ngModel)]="folderData.npolice" readonly>
+                </div>-->
+  
+                <div class="col-sm-6">
+                  <label for="typeDoss" class="form-label">Type Dossier </label>
+                  <input type="text" class="form-control" id="typeDoss" name="typeDoss" [(ngModel)]="folderData.typeDoss" readonly>
+                </div>
+  
+                <div class="col-sm-6">
+                  <label for="etatDossier" class="form-label">Etat Dossier </label>
+                  <input type="text" class="form-control" id="etatDossier" name="etatDossier" [(ngModel)]="folderData.etatDossier" readonly>
+                </div>
+                
+                <div class="col-sm-6">
+                  <label for="userProassur" class="form-label">Utilisateur Proassur </label>
+                  <input type="text" class="form-control" id="userProassur" name="gestionnaire" [(ngModel)]="folderViewProassur.gestionnaire" readonly>
+                </div>
+              </div>
+
+              <div *ngIf="folderConsultationData.naffaire!=''" class="col-sm-12" style="display: contents;">
+              <div class="col-sm-6">
+                <label for="dataConsultation" class="form-label">Date Consutation </label>
+                <input type="date" class="form-control" id="dataConsultation" name="dataConsultation" [(ngModel)]="folderConsultationData.dateConsultation" readonly>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="consulePar" class="form-label">Consulté Par </label>
+                <input type="text" class="form-control" id="consulePar" name="consulePar" [(ngModel)]="folderConsultationData.consultePar" readonly>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="archivisteConsultation" class="form-label">Archiviste Consultation </label>
+                <input type="text" class="form-control" id="archivisteConsultation" name="archivisteConsultation" [(ngModel)]="folderConsultationData.archivisteConsultation" readonly>
+              </div>
+            </div>
+            </div>
+         
+            <div class="row g-3" *ngIf="this.data.typeDossier=='Cxp'" >
+              <div class="col-sm-6">
+                <label for="NumeroPolice" class="form-label">Numero Dossier Cxp</label>
+                <input type="text" class="form-control" id="NumeroPolice" name="ndossier" [(ngModel)]="folderData.ndossier" readonly>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="nomclient" class="form-label">Nom Client</label>
+                <input type="text" class="form-control" id="nomclient" name="clientName" [(ngModel)]="folderData.clientName" readonly>
+                
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="vehicule" class="form-label">Vehicule</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="vehicule" name="vehicule" [(ngModel)]="folderData.vehicule" readonly>
+                  
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="user" class="form-label">Ajouté par</label>
+                <input type="text" class="form-control" id="user" name="archiviste"  [(ngModel)]="folderData.archiviste" readonly>
+                
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="codeAgence" class="form-label">Code Agence </label>
+                <input type="text" class="form-control" id="codeAgence" name="agenceCode" [(ngModel)]="folderData.agenceCode" readonly>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="dataAjout" class="form-label">Date Ajout </label>
+                <input type="text" class="form-control" id="dataAjout" name="dateAdded" [(ngModel)]="folderData.dateAdded" readonly>
+              </div>
+            </div>
+           
+            
+  
+            <!-- Payment section can go here -->
+             <div 
+             [style.display]="(folderConsultationData.naffaire != '')? 'flex': 'none'"
+             style="width: fit-content;padding: 0px;margin-top: 23px;margin-bottom: 0px !important;height: 50px;width: 100%;">
+                    <ng-container *ngIf="folderConsultationData.naffaire!=''">
+                     
+                    <button class="w-10 btn btn-primary btn-lg"(click)="retourDate()"   style="display: block;margin-left: auto;margin-right: auto;">Récupérer le dossier</button>
+                    <ng-container *ngIf="isActive==true">
+                    <div class="mb-3" style="width: 480px;display: flex;">
+                      <label for="dateInput" class="form-label">Date de récupération:</label>
+                      <input type="date" class="form-control" id="dateInput" name="dateRetour" [(ngModel)]="dateRetour" style="
+                      width: 230px;
+                      margin-left: 15px;">
+                     <!-- <div class="invalid-feedback">
+                          Please choose a valid date.
+                      </div>-->
+                      <button type="submit" class="btn btn-primary" (click)="deleteConsutation()" style="margin-left: auto;" >Confirmer</button>
+                  </div>
+                  
+                </ng-container>
+                </ng-container>
+              </div>
+          
+
+            </form>
+
+        </div>
+  
+        <div class="col-md-5 col-lg-4 order-md-last" style= "height: 300px;" >
+          <h4 >
+            <span class="text-primary" style='font-size: x-large;'> Historique Dossier</span>
+        </h4>
+        <div style="max-height: 300px; height: 300px; overflow-y: auto;" *ngIf="historys.length!=0">
+          
+          <ul class="list-group mb-3" *ngFor="let item of historys" >
+            
+            <li class="list-group-item d-flex justify-content-between lh-sm" >
+              <div>
+                <h6 class="my-0"><b>Consulter Par :</b> {{item.consulterPar}}</h6>
+                <h6 class="my-0"><b>Date de consultation :</b> {{item.dateConsultation}}</h6>
+                <h6 class="my-0"><b>Date de récupération :</b> {{item.dateRetourReel}}</h6>
+              </div>
+              
+            </li>
+            
+          </ul>
+        </div>
+          
+        </div>
+        
+      </div>
+      <ng-container *ngIf="folderConsultationData.naffaire==''">
+        <form class="needs-validation" > 
+            <div   style="margin-top: 1px;"  >
+                <div class="col-sm-12">
+                  <label for="NumeroDos" class="form-label">Numero Dossier</label>
+                  <input type="text" class="form-control" id="NumeroDos" name="ndossier" [(ngModel)]="folderData.ndossier" readonly>
+                </div>
+                <div class="col-sm-12">
+                  <label for="NomPer" class="form-label">Nom Personnel Technique</label>
+                  <input type="text" class="form-control" id="NomPer"  name="NomPer" [(ngModel)]="NomPer" (focus)="getNames()" list="suggestionsNom" required>
+                  <datalist id="suggestionsNom" required>
+                    <option *ngFor="let suggestion of suggestionsNom" [value]="suggestion"></option>
+                  </datalist>
+                </div>
+                <div class="col-sm-12">
+                  <label for="DateCons" class="form-label">Date Consultation</label>
+                  <input type="date" class="form-control" id="DateCons" name="DateCons" [(ngModel)]="DateCons">
+                </div>
+                <div class="col-sm-12">
+                  <label for="dateRet" class="form-label">Date de retour</label>
+                  <input type="date" class="form-control" id="dateRet" name="dateRet" [(ngModel)]="dateRet">
+                </div>
+
+                <div class="col-sm-12" style="margin-left: 460px;margin-top: 20px; margin-bottom: 58px;" >
+                  <button type="button"
+                  [style.margin-top]="(this.data.typeDossier == 'Cxp') ? '35px' : null"
+                  [style.display]="(this.data.typeDossier == 'Cxp') ? 'block' : null"
+                  class="btn btn-primary" (click)="AjoutConsultation()">Consulter</button>
+                </div>
+          
+            </div>
+        </form>
+    </ng-container>
+    
+    </main>
+    
+  </div>  
+  

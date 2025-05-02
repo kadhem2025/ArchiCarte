@@ -1,0 +1,52 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="width: 700px;">
+      <div class="card-header bg-gradient-primary text-white text-center rounded-pill">
+        <h4 class="mb-0">Récupération Dossiers</h4>
+      </div>
+      <div class="card-body">
+        <form>
+          <!-- Selection input for Police, Sinistre, Cxp -->
+          <div class="form-group">
+            <label for="categorySelect" class="font-weight-bold">Type Dossier</label>
+            <select class="form-control" id="categorySelect" name="typeDossier" [(ngModel)]="typeDossier">
+              <option></option>
+              <option value="Police">Police</option>
+              <option value="Sinistre">Sinistre</option>
+              <option value="Cxp">Cxp</option>
+            </select>
+          </div>
+  
+          <!-- Textarea for feedback -->
+          <div class="form-group">
+            <label for="feedbackTextArea" class="font-weight-bold">Dossiers</label>
+            <textarea
+              class="form-control"
+              id="feedbackTextArea"
+              rows="5"
+              placeholder="Les Dossiers..."
+              name="dossiers"
+              [(ngModel)]="dossiers"
+            ></textarea>
+          </div>
+  
+          <!-- Date input -->
+          <div class="form-group">
+            <label for="dateInput" class="font-weight-bold">Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dateInput"
+              [(ngModel)]="selectedDate"
+              name="date"
+            />
+          </div>
+  
+          <!-- Submit button -->
+          <button type="submit" style="margin-left: 250px;" (click)="deleteConsutation()"  class="btn btn-primary mt-3">
+            Récupérer
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,44 @@
+html,
+body,
+.intro {
+  width: 1000px;
+  margin-top: 150px;
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.mask-custom {
+  background: rgba(24, 24, 16, .2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 1.5;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.1px;
+  text-align: center;
+  margin-top: -250px;
+}
+button{
+  color: #fff;
+  border-radius: 50px;
+}

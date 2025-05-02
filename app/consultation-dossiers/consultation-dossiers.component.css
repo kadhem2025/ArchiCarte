@@ -1,0 +1,57 @@
+/* Styling for the container */
+.container {
+    background-color: #f8f9fa; /* Bootstrap light background */
+    width: 700px;
+    border: 1px solid #dee2e6; /* Light border */
+  }
+  
+  /* Form title styling */
+  h3 {
+    font-weight: bold;
+    color: #feffff; /* Dark gray */
+  }
+  
+  /* Form labels styling */
+  .form-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #495057; /* Slightly darker text for labels */
+  }
+  
+  /* Input fields */
+  .form-control, .form-select {
+    height: 45px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Button styling */
+  .btn-lg {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Primary blue color */
+    border: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-lg:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Margin for spacing */
+  .mb-3 {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 15px;
+    }
+  }
+  .card-header {
+    background-color: #007bff;
+    border-radius: 50px;
+  }
+  

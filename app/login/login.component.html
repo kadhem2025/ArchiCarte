@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="display-1">
+        
+      </div>
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login">
+
+                <div class="center">
+                    <div class="btn-group" role="group" aria-label="Basic example" >
+                    
+                     <input type="radio" class="btn-check" name="options" value="personnel" id="personnel"  [(ngModel)]="selectedOption" >
+                     <label class="btn btn-primary" for="personnel"  >Personnel</label>
+
+                      
+                      <input type="radio" class="btn-check" name="options" value="archiviste" id="archiviste"  [(ngModel)]="selectedOption"  >
+                      <label class="btn btn-primary" for="archiviste"  >Archiviste</label>
+                        
+                      
+                      <input type="radio" class="btn-check" name="options" value="administrateur" id="administrateur"  [(ngModel)]="selectedOption"  >
+                      <label class="btn btn-primary" for="administrateur"   >Administrateur</label>
+                        <p></p>
+                       
+                     
+                    </div>
+                  </div>
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" name="username" [(ngModel)]="model.username" placeholder="Nom d'utilisateur">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="{{ showPassword ? 'text' : 'password' }}" name="password" [(ngModel)]="model.password"  class="login__input" placeholder="mot de passe">
+					<button (click)="togglePasswordVisibility()" class="eye">
+						<i class="fas" [ngClass]="{'fa-eye': !showPassword, 'fa-eye-slash': showPassword}"></i>
+					  </button>
+				</div>
+				<button class="button login__submit" (click)="handleRouting()">
+					<span class="button__text" >SE CONNECTER</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+                <a routerLink="/login/forgotPassword"> Mot de passe oblié</a>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+    
+</div>

@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4" style="font-size: xx-large;">Exportation des données</h2>
+    <br><br>
+    <div class="row">
+      <!-- Liste déroulante pour type d'entité -->
+      <div class="col-md-4 mb-3" style="width: 100px;">
+        <label for="entityType" class="form-label"><b>Type d'entité:</b></label>
+        <select class="form-select" id="entityType" aria-label="Sélectionner le type d'entité" name="entityType" [(ngModel)]="entityType" required>
+          <option selected>Choisir...</option>
+          <option value="police">Police</option>
+          <option value="sinistre">Sinistre</option>
+          <option value="cxp">Cxp</option>
+        </select>
+      </div>
+
+
+      <div class="col-md-4 mb-3">
+        <label for="exportType" class="form-label"><b>Type Exportation:</b></label>
+        <select class="form-select" id="exportType" aria-label="Sélectionner le type d'exportation" name="typeExport" [(ngModel)]="typeExport"  required>
+          <option selected>Choisir...</option>
+          <option value="dossiers">Dossiers</option>
+          <option value="consultation">Consultation</option>
+        </select>
+      </div>
+  
+      <!-- Input pour la date -->
+      <div class="col-md-4 mb-3">
+        <label for="exportDate" class="form-label"><b>Date d'exportation:</b></label>
+        <input type="date" class="form-control" id="exportDate" name="dateConsultation"  [(ngModel)]="dateConsultation" />
+      </div>
+  
+      <!-- Case à cocher pour export Excel et PDF -->
+    </div>
+  
+    <!-- Bouton d'exportation -->
+    <div class="text-center">
+      <button type="button" class="btn btn-primary" (click)="exportExcel()">Exporter</button>
+    </div>
+  </div>
+  
